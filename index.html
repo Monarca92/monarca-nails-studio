@@ -194,34 +194,8 @@ function sendBooking(e){
 </script>
 
 
-<div id="prueba-reserva-monarca" style="max-width:700px;margin:20px auto;padding:20px;border:1px dashed #d4af37;border-radius:18px;background:#fff8ef;text-align:center;">
-  <h3 style="margin:0 0 8px;color:#111;">🦋 Prueba de reserva</h3>
-  <p style="margin:0 0 14px;color:#333;">Esta es una reserva ficticia para comprobar el mensaje de WhatsApp. No es una cita real.</p>
-  <button onclick="probarReservaMonarca()" style="padding:12px 18px;border:0;border-radius:12px;background:#ff6a00;color:white;font-weight:700;cursor:pointer;">
-    Probar reserva de Ana
-  </button>
-</div>
-<script>
-function probarReservaMonarca(){
-  const nombre="Ana";
-  const servicio="Soft Gel — $50 en adelante, dependiendo del largo";
-  const fecha="20 de septiembre";
-  const hora="10:00 AM";
-  const telefono="305-000-0000";
-  const mensaje =
-`Hola 🦋 quiero solicitar una cita en Monarca Nails Studio.
 
-👩 Nombre: ${nombre}
-💅 Servicio: ${servicio}
-📅 Fecha: ${fecha}
-⏰ Hora: ${hora}
-📱 Teléfono: ${telefono}
 
-Sé que la cita queda pendiente de confirmación y del depósito de $20.`;
-  const url="https://wa.me/1786858959?text="+encodeURIComponent(mensaje);
-  window.open(url,"_blank");
-}
-</script>
 
 </body>
 </html>
