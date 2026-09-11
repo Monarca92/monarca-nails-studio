@@ -1,275 +1,571 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monarca Nails Studio</title>
 
-<title>Monarca Nails Studio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #0d0d0d;
+      color: #f7e7b0;
+    }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff8fc;
-    color: #3d2940;
-}
+    header {
+      text-align: center;
+      padding: 35px 20px 25px;
+      background:
+        radial-gradient(circle at center, #3a1b08 0%, #15100c 45%, #080808 100%);
+      border-bottom: 2px solid #d99a32;
+    }
 
-header {
-    background: linear-gradient(135deg, #6a1b9a, #9c4dcc);
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
-}
+    .logo {
+      width: 220px;
+      max-width: 90%;
+      margin: auto;
+      display: block;
+    }
 
-header h1 {
-    font-size: 42px;
-    margin: 0 0 10px;
-}
+    .brand {
+      font-size: 38px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      color: #f5d77b;
+      text-shadow: 0 0 10px #b96d16;
+      margin-top: 8px;
+    }
 
-header p {
-    font-size: 19px;
-    margin: 0;
-}
+    .tagline {
+      font-family: Arial, sans-serif;
+      color: #e9c77a;
+      font-size: 14px;
+      margin-top: 8px;
+    }
 
-nav {
-    background: white;
-    text-align: center;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
-}
-
-nav a {
-    color: #6a1b9a;
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
-}
-
-section {
-    max-width: 950px;
-    margin: auto;
-    padding: 45px 20px;
-}
-
-h2 {
-    text-align: center;
-    color: #6a1b9a;
-    font-size: 30px;
-    margin-bottom: 30px;
-}
-
-.intro {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 18px;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(106,27,154,.15);
-}
-
-.card h3 {
-    color: #6a1b9a;
-    font-size: 22px;
-}
-
-.card p {
-    line-height: 1.6;
-}
-
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #9c4dcc;
-}
-
-.booking {
-    background: #f3e5f5;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.button {
-    display: inline-block;
-    background: #6a1b9a;
-    color: white;
-    padding: 15px 28px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 8px;
-}
-
-.button:hover {
-    background: #9c4dcc;
-}
-
-footer {
-    background: #3d2940;
-    color: white;
-    text-align: center;
-    padding: 25px;
-}
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 32px;
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 28px;
+      padding: 16px 10px;
+      background: #111111;
+      border-bottom: 1px solid #c98527;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
-        display: inline-block;
-        margin: 6px;
+      color: #f3cf73;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
     }
-}
-</style>
+
+    nav a:hover {
+      color: #ff9d27;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 75px 20px 80px;
+      background:
+        radial-gradient(ellipse at center, #552407 0%, #211208 30%, #0d0d0d 72%);
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      color: #f8df91;
+      margin: 0 auto 15px;
+      max-width: 900px;
+    }
+
+    .hero p {
+      font-family: Arial, sans-serif;
+      color: #f1dca4;
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      background: linear-gradient(135deg, #f4b13c, #c66b12);
+      color: #160d05;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      border: 1px solid #ffdc82;
+      box-shadow: 0 0 15px #8f4b12;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: linear-gradient(135deg, #ffd36b, #e17d18);
+    }
+
+    section {
+      padding: 55px 20px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #f5d77b;
+      font-size: 32px;
+      margin: 0 0 35px;
+      text-shadow: 0 0 8px #75400e;
+    }
+
+    .section-title span {
+      color: #ff9e2c;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #202020, #111111);
+      border: 1px solid #d28b2d;
+      border-radius: 16px;
+      padding: 24px 20px;
+      min-height: 190px;
+      box-shadow: 0 0 12px rgba(211, 132, 29, 0.12);
+    }
+
+    .card h3 {
+      color: #f3c85f;
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: #eee1bd;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .price {
+      color: #ffbd45 !important;
+      font-size: 23px !important;
+      font-family: Georgia, serif !important;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .small {
+      font-size: 12px !important;
+      color: #cbbd9c !important;
+    }
+
+    .packages {
+      background: #111111;
+      border-top: 1px solid #6e4318;
+      border-bottom: 1px solid #6e4318;
+      max-width: none;
+    }
+
+    .packages-inner {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .extras .card {
+      min-height: 120px;
+    }
+
+    .reservation {
+      background:
+        radial-gradient(ellipse at top, #3d1b07, #111111 60%);
+      border-top: 1px solid #c98527;
+      border-bottom: 1px solid #c98527;
+      max-width: none;
+    }
+
+    .reservation-inner {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    form {
+      background: #f5f0dc;
+      color: #33200c;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(224, 143, 37, 0.2);
+    }
+
+    label {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 14px 0 7px;
+      color: #38230d;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #c99a52;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      background: #fffdf5;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    form .button {
+      border: none;
+      width: 100%;
+      margin-top: 22px;
+      font-size: 15px;
+    }
+
+    .notice {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #6d522c;
+      margin-top: 15px;
+      line-height: 1.5;
+    }
+
+    .policies {
+      background: #111111;
+      max-width: none;
+    }
+
+    .policies-inner {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .policy-box {
+      border: 1px solid #c98527;
+      border-radius: 15px;
+      padding: 25px;
+      background: #191919;
+    }
+
+    .policy-box li {
+      font-family: Arial, sans-serif;
+      color: #eee1bd;
+      margin: 14px 0;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      background: #080808;
+      border-top: 2px solid #d99a32;
+      font-family: Arial, sans-serif;
+    }
+
+    footer h3 {
+      color: #f5d77b;
+      font-family: Georgia, serif;
+      font-size: 21px;
+    }
+
+    footer p {
+      color: #e9c77a;
+      font-size: 14px;
+    }
+
+    .contact-link {
+      color: #ffb642;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .brand {
+        font-size: 29px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      section {
+        padding: 40px 15px;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>🦋 Monarca Nails Studio</h1>
-    <p>Belleza, elegancia y estilo en cada detalle ✨</p>
-</header>
+  <header>
+    <div class="brand">🦋 MONARCA</div>
+    <div class="tagline">NAILS STUDIO · Beauty in every detail ♡</div>
+  </header>
 
-<nav>
+  <nav>
     <a href="#inicio">Inicio</a>
     <a href="#servicios">Servicios</a>
-    <a href="#reservas">Reservas</a>
-    <a href="#contacto">Contacto</a>
-</nav>
+    <a href="#paquetes">Paquetes</a>
+    <a href="#extras">Extras</a>
+    <a href="#reservar">Reservar</a>
+    <a href="#politicas">Políticas</a>
+  </nav>
 
-<section id="inicio">
-    <h2>Bienvenida</h2>
+  <div class="hero" id="inicio">
+    <h1>Donde la belleza de la mariposa Monarca se convierte en arte.</h1>
+    <p>Manicure y pedicure con un toque elegante y femenino.</p>
+    <a class="button" href="#reservar">RESERVAR CITA</a>
+  </div>
 
-    <div class="intro">
-        <p>
-            Bienvenida a <strong>Monarca Nails Studio</strong>.
-            Un espacio dedicado a realzar la belleza de tus manos
-            con diseños elegantes y personalizados.
-        </p>
+  <section id="servicios">
+    <h2 class="section-title">💅 Nuestros <span>Servicios</span></h2>
 
-        <p>
-            💜 Atención personalizada<br>
-            🦋 Diseños modernos<br>
-            ✨ Trabajo con dedicación y detalle
-        </p>
-    </div>
-</section>
+    <div class="cards">
 
-<section id="servicios">
+      <div class="card">
+        <h3>Soft Gel</h3>
+        <p>Preparación, cutícula, aplicación de Soft Gel, forma y largo, color en gel y top coat.</p>
+        <p class="price">$50 en adelante</p>
+        <p class="small">El precio depende del largo.</p>
+      </div>
 
-    <h2>✨ Nuestros Servicios</h2>
+      <div class="card">
+        <h3>Pintura en Gel</h3>
+        <p>Preparación, cutícula, base, color en gel y top coat.</p>
+        <p class="price">$30</p>
+      </div>
 
-    <div class="services">
+      <div class="card">
+        <h3>Pintura Regular</h3>
+        <p>Preparación, cutícula, esmalte regular y acabado final.</p>
+        <p class="price">$20</p>
+      </div>
 
-        <div class="card">
-            <h3>💅 Soft Gel</h3>
+      <div class="card">
+        <h3>Pedicure Regular</h3>
+        <p>Cuidado y acabado de las uñas de los pies.</p>
+        <p class="price">$30</p>
+      </div>
 
-            <p>
-                Extensión de uñas con Soft Gel para un acabado
-                elegante, cómodo y duradero.
-            </p>
-
-            <p class="price">
-                $50 en adelante
-            </p>
-
-            <p>
-                El precio depende del largo seleccionado.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🦋 Press-On Nails</h3>
-
-            <p>
-                Uñas Press-On personalizadas para lucir unas manos
-                hermosas.
-            </p>
-
-            <p class="price">
-                Precio según diseño
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>✨ Diseños Personalizados</h3>
-
-            <p>
-                Diseños especiales según tu estilo,
-                ocasión y preferencias.
-            </p>
-
-            <p class="price">
-                Consulta al reservar
-            </p>
-        </div>
+      <div class="card">
+        <h3>Pedicure Gel</h3>
+        <p>Pedicure con acabado en gel.</p>
+        <p class="price">$40</p>
+      </div>
 
     </div>
+  </section>
 
-</section>
+  <section class="packages" id="paquetes">
+    <div class="packages-inner">
+      <h2 class="section-title">🦋 Paquetes <span>Monarca</span></h2>
 
-<section id="reservas" class="booking">
+      <div class="cards">
 
-    <h2>📅 Reserva tu cita</h2>
+        <div class="card">
+          <h3>Monarca Combo</h3>
+          <p>Pintura Regular + Pedicure Regular</p>
+          <p class="price">$45</p>
+        </div>
 
+        <div class="card">
+          <h3>Monarca Gel Combo</h3>
+          <p>Pintura en Gel + Pedicure Gel</p>
+          <p class="price">$65</p>
+        </div>
+
+        <div class="card">
+          <h3>Monarca Soft Gel Combo</h3>
+          <p>Soft Gel + Pedicure Gel</p>
+          <p class="price">$85</p>
+        </div>
+
+        <div class="card">
+          <h3>Combo Mixto</h3>
+          <p>Pintura en Gel + Pedicure Regular</p>
+          <p class="price">$55</p>
+        </div>
+
+        <div class="card">
+          <h3>Soft Gel + Regular</h3>
+          <p>Soft Gel + Pedicure Regular</p>
+          <p class="price">$75</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="extras" id="extras">
+    <h2 class="section-title">✨ <span>Extras</span></h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>French +$5</h3>
+      </div>
+
+      <div class="card">
+        <h3>Diseño sencillo +$5</h3>
+      </div>
+
+      <div class="card">
+        <h3>Diseño elaborado +$10</h3>
+      </div>
+
+      <div class="card">
+        <h3>Cristales / Charms +$5</h3>
+      </div>
+
+      <div class="card">
+        <h3>Reparación de una uña +$5</h3>
+      </div>
+
+      <div class="card">
+        <h3>Retiro de Soft Gel +$10</h3>
+      </div>
+
+      <div class="card">
+        <h3>Retiro de Gel +$5</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="reservation" id="reservar">
+    <div class="reservation-inner">
+
+      <h2 class="section-title">📅 Reserva tu <span>cita</span></h2>
+
+      <form id="bookingForm">
+
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="servicio">Selecciona un servicio</label>
+        <select id="servicio" required>
+          <option value="">Selecciona un servicio</option>
+          <option>Soft Gel - $50 en adelante</option>
+          <option>Pintura en Gel - $30</option>
+          <option>Pintura Regular - $20</option>
+          <option>Pedicure Regular - $30</option>
+          <option>Pedicure Gel - $40</option>
+          <option>Monarca Combo - $45</option>
+          <option>Monarca Gel Combo - $65</option>
+          <option>Monarca Soft Gel Combo - $85</option>
+          <option>Combo Mixto - $55</option>
+          <option>Soft Gel + Regular - $75</option>
+        </select>
+
+        <label for="fecha">Fecha preferida</label>
+        <input type="date" id="fecha" required>
+
+        <label for="hora">Hora preferida</label>
+        <input type="time" id="hora" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" placeholder="Tu número de teléfono" required>
+
+        <label for="detalles">Detalles adicionales</label>
+        <textarea id="detalles" placeholder="Diseño, largo, extras, etc."></textarea>
+
+        <p class="notice">
+          Para confirmar la cita se requiere un depósito de $20.
+          El depósito se descuenta del total. Aceptamos efectivo y Zelle.
+        </p>
+
+        <button type="submit" class="button">
+          ENVIAR RESERVACIÓN POR WHATSAPP
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+  <section class="policies" id="politicas">
+    <div class="policies-inner">
+
+      <h2 class="section-title">📋 <span>Políticas</span></h2>
+
+      <div class="policy-box">
+        <ul>
+          <li>Las citas se reservan con un depósito de $20, que se descuenta del total.</li>
+          <li>El depósito no es reembolsable en cancelaciones fuera del tiempo permitido o no-show.</li>
+          <li>Cambios o cancelaciones con 24 horas de anticipación permiten reprogramar.</li>
+          <li>Tolerancia máxima de 10 minutos. Después de ese tiempo puede ser necesario reprogramar.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <h3>🦋 MONARCA NAILS STUDIO</h3>
     <p>
-        Para reservar tu cita, escríbeme por WhatsApp.
-        Indica el servicio que deseas y el día que prefieres.
+      WhatsApp:
+      <a class="contact-link" href="https://wa.me/17868588959" target="_blank">
+        786-858-8959
+      </a>
     </p>
+    <p>💵 Efectivo · 📱 Zelle</p>
+    <p>© 2026 Monarca Nails Studio · Todos los derechos reservados.</p>
+  </footer>
 
-    <a
-       class="button"
-       href="https://wa.me/1786858959?text=Hola%20Monarca%20Nails%20Studio,%20quiero%20reservar%20una%20cita."
-       target="_blank">
-       💬 Reservar por WhatsApp
-    </a>
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
 
-</section>
+      const nombre = document.getElementById("nombre").value;
+      const servicio = document.getElementById("servicio").value;
+      const fecha = document.getElementById("fecha").value;
+      const hora = document.getElementById("hora").value;
+      const telefono = document.getElementById("telefono").value;
+      const detalles = document.getElementById("detalles").value;
 
-<section id="contacto">
+      const mensaje =
+        "🦋 *NUEVA RESERVACIÓN - MONARCA NAILS STUDIO*%0A%0A" +
+        "👤 *Nombre:* " + nombre + "%0A" +
+        "💅 *Servicio:* " + servicio + "%0A" +
+        "📅 *Fecha:* " + fecha + "%0A" +
+        "⏰ *Hora:* " + hora + "%0A" +
+        "📞 *Teléfono:* " + telefono + "%0A" +
+        "✨ *Detalles:* " + (detalles || "Ninguno") + "%0A%0A" +
+        "💵 Depósito requerido: $20";
 
-    <h2>📲 Contacto</h2>
-
-    <div class="intro">
-
-        <p>
-            <strong>Monarca Nails Studio</strong>
-        </p>
-
-        <p>
-            📱 WhatsApp: 786-858-8959
-        </p>
-
-        <a
-           class="button"
-           href="https://wa.me/1786858959"
-           target="_blank">
-           💬 WhatsApp
-        </a>
-
-    </div>
-
-</section>
-
-<footer>
-    <p>🦋 Monarca Nails Studio</p>
-    <p>Tu belleza, tu estilo, tus uñas ✨</p>
-</footer>
+      window.open("https://wa.me/17868588959?text=" + mensaje, "_blank");
+    });
+  </script>
 
 </body>
 </html>
