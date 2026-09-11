@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Monarca Nails Studio</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8fc;
+    color: #3d2940;
+}
+
+header {
+    background: linear-gradient(135deg, #6a1b9a, #9c4dcc);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin: 0 0 10px;
+}
+
+header p {
+    font-size: 19px;
+    margin: 0;
+}
+
+nav {
+    background: white;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+nav a {
+    color: #6a1b9a;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+section {
+    max-width: 950px;
+    margin: auto;
+    padding: 45px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #6a1b9a;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.intro {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(106,27,154,.15);
+}
+
+.card h3 {
+    color: #6a1b9a;
+    font-size: 22px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #9c4dcc;
+}
+
+.booking {
+    background: #f3e5f5;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background: #6a1b9a;
+    color: white;
+    padding: 15px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 8px;
+}
+
+.button:hover {
+    background: #9c4dcc;
+}
+
+footer {
+    background: #3d2940;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🦋 Monarca Nails Studio</h1>
+    <p>Belleza, elegancia y estilo en cada detalle ✨</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio">
+    <h2>Bienvenida</h2>
+
+    <div class="intro">
+        <p>
+            Bienvenida a <strong>Monarca Nails Studio</strong>.
+            Un espacio dedicado a realzar la belleza de tus manos
+            con diseños elegantes y personalizados.
+        </p>
+
+        <p>
+            💜 Atención personalizada<br>
+            🦋 Diseños modernos<br>
+            ✨ Trabajo con dedicación y detalle
+        </p>
+    </div>
+</section>
+
+<section id="servicios">
+
+    <h2>✨ Nuestros Servicios</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>💅 Soft Gel</h3>
+
+            <p>
+                Extensión de uñas con Soft Gel para un acabado
+                elegante, cómodo y duradero.
+            </p>
+
+            <p class="price">
+                $50 en adelante
+            </p>
+
+            <p>
+                El precio depende del largo seleccionado.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🦋 Press-On Nails</h3>
+
+            <p>
+                Uñas Press-On personalizadas para lucir unas manos
+                hermosas.
+            </p>
+
+            <p class="price">
+                Precio según diseño
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✨ Diseños Personalizados</h3>
+
+            <p>
+                Diseños especiales según tu estilo,
+                ocasión y preferencias.
+            </p>
+
+            <p class="price">
+                Consulta al reservar
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="reservas" class="booking">
+
+    <h2>📅 Reserva tu cita</h2>
+
+    <p>
+        Para reservar tu cita, escríbeme por WhatsApp.
+        Indica el servicio que deseas y el día que prefieres.
+    </p>
+
+    <a
+       class="button"
+       href="https://wa.me/1786858959?text=Hola%20Monarca%20Nails%20Studio,%20quiero%20reservar%20una%20cita."
+       target="_blank">
+       💬 Reservar por WhatsApp
+    </a>
+
+</section>
+
+<section id="contacto">
+
+    <h2>📲 Contacto</h2>
+
+    <div class="intro">
+
+        <p>
+            <strong>Monarca Nails Studio</strong>
+        </p>
+
+        <p>
+            📱 WhatsApp: 786-858-8959
+        </p>
+
+        <a
+           class="button"
+           href="https://wa.me/1786858959"
+           target="_blank">
+           💬 WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>🦋 Monarca Nails Studio</p>
+    <p>Tu belleza, tu estilo, tus uñas ✨</p>
+</footer>
+
+</body>
+</html>
